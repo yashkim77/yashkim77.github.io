@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Building a Multi-Hyperscaler Co-Sell Automation Platform — Yash Kimtani</title>
+<meta name="description" content="Case study: how I built Labra's co-sell synchronization platform across Salesforce, HubSpot, AWS Partner Central, and Microsoft Partner Center, cutting deal life cycle time by ~65%.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html#top" class="monogram" aria-label="Yash Kimtani — home">YK</a>
+    <div class="case-header-actions">
+      <a href="index.html#work" class="case-back">← Back to work</a>
+      <a href="mailto:yashkimtani77@gmail.com" class="case-email-btn">Email</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section class="case-hero container">
+    <span class="case-kicker">Case Study 01</span>
+    <h1 class="case-title">Building a Multi-Hyperscaler Co-Sell Automation Platform</h1>
+
+    <div class="case-meta">
+      <div class="case-meta-item">
+        <span class="case-meta-label">Role</span>
+        <span class="case-meta-value">Product Manager</span>
+      </div>
+      <div class="case-meta-item">
+        <span class="case-meta-label">Company</span>
+        <span class="case-meta-value">Labra</span>
+      </div>
+    </div>
+
+    <div class="case-partners">
+      <span class="case-meta-label">Partnered with</span>
+      <div class="pill-row">
+        <span class="pill">Engineering</span>
+        <span class="pill">Sales</span>
+        <span class="pill">Customer Success</span>
+        <span class="pill">RevOps</span>
+        <span class="pill">QA</span>
+        <span class="pill">Marketing</span>
+        <span class="pill">Design</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="case-body">
+
+      <div class="case-section">
+        <p class="case-section-number">01</p>
+        <h2 class="case-section-title">The Challenge</h2>
+        <p class="case-section-text">Enterprise companies running co-sell programs had to manage every opportunity across two separate systems — their CRM (Salesforce or HubSpot) and the cloud provider's partner portal, such as AWS Partner Central or Microsoft Partner Center (Azure).</p>
+        <p class="case-section-text">Whenever a deal was created or updated in one system, the same change had to be manually reflected in the other. In many organizations, Sales owned the CRM while Partner Operations managed the hyperscaler portal, creating duplicate work, inconsistent data, and delays throughout the sales cycle.</p>
+        <p class="case-section-text">As customers scaled, keeping these systems synchronized became increasingly difficult, slowing down co-sell execution and reducing trust in the data.</p>
+      </div>
+
+      <div class="case-section">
+        <p class="case-section-number">02</p>
+        <h2 class="case-section-title">My Role</h2>
+        <p class="case-section-text">I owned the product end-to-end, from customer discovery and roadmap definition to PRDs, execution, rollout, and post-launch improvements.</p>
+        <p class="case-section-text">Working closely with Engineering, Sales, Customer Success, and RevOps, I defined how deal synchronization should work across CRMs and hyperscaler partner portals. My engineering background also helped bridge technical implementation with product strategy, especially around the integration architecture.</p>
+        <p class="case-section-text">Beyond the core platform, I owned the customer-facing experiences through the Labra Salesforce App and Labra HubSpot App, delivering automation, notifications, workflow improvements, and ongoing enhancements based on customer feedback.</p>
+      </div>
+
+      <div class="case-section">
+        <p class="case-section-number">03</p>
+        <h2 class="case-section-title">Key Product Decision — Build a reusable synchronization platform, not a one-off integration</h2>
+        <p class="case-section-text">Instead of building separate solutions for each CRM and cloud provider, we designed Labra as an orchestration layer between them.</p>
+        <p class="case-section-text">Whenever an opportunity changed in Salesforce, HubSpot, AWS Partner Central, or Microsoft Partner Center, Labra detected the change, applied business rules, and synchronized the update across connected systems automatically.</p>
+        <p class="case-section-text">We first launched this platform for AWS customers. As demand for Microsoft Azure co-sell grew, we extended the same architecture to support Microsoft Partner Center, allowing us to expand into another hyperscaler without redesigning the product.</p>
+        <p class="case-section-text"><strong>Building the platform this way meant we weren't solving a single integration problem — we were creating a scalable foundation for multi-hyperscaler co-sell automation.</strong></p>
+      </div>
+
+      <div class="case-section">
+        <p class="case-section-number">04</p>
+        <h2 class="case-section-title">What We Shipped</h2>
+        <ul class="case-list">
+          <li>A synchronization platform connecting Salesforce, HubSpot, and cloud hyperscaler partner portals</li>
+          <li>Native Salesforce and HubSpot applications for managing co-sell opportunities directly from the CRM</li>
+          <li>Automated deal creation, stage synchronization, notifications, validation, and error handling</li>
+          <li>Support for AWS Partner Central, later extended to Microsoft Partner Center (Azure) using the same platform architecture</li>
+          <li>Continuous enhancements driven by customer feedback and evolving hyperscaler APIs</li>
+        </ul>
+      </div>
+
+      <div class="case-outcome">
+        <h3 class="case-outcome-title">Outcome</h3>
+        <div class="case-stats">
+          <div>
+            <p class="case-stat-value">~65%</p>
+            <p class="case-stat-label">average reduction in customer deal lifecycle time</p>
+          </div>
+          <div>
+            <p class="case-stat-value">2</p>
+            <p class="case-stat-label">cloud hyperscalers supported through the same platform architecture</p>
+          </div>
+          <div>
+            <p class="case-stat-value">4+</p>
+            <p class="case-stat-label">enterprise systems synchronized automatically</p>
+          </div>
+        </div>
+        <ul class="case-list">
+          <li>Eliminated repetitive manual updates between CRM and hyperscaler portals</li>
+          <li>Improved collaboration between Sales and Partner Operations</li>
+          <li>Enabled customers to manage co-sell opportunities from within their CRM</li>
+          <li>The platform architecture scaled from AWS to Microsoft Azure without requiring a complete redesign</li>
+          <li>Some enterprise customers reported up to 80% reductions in manual operational effort</li>
+        </ul>
+      </div>
+
+      <div class="case-reflection">
+        <p class="case-reflection-label">Reflection</p>
+        <p class="case-reflection-text">This project reflects the kind of work I enjoy most: taking a fragmented, manual process spanning multiple systems and turning it into a platform that scaled from one hyperscaler to another without a redesign — using my engineering background to make sure the architecture held up as the scope grew.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="case-next container">
+    <a href="index.html#work" class="case-back case-next-back">← Back to work</a>
+    <p class="case-next-label">Next case study</p>
+    <a href="propensity-scoring.html" class="case-next-link">Helping Sales Teams Prioritize the Right Co-sell Opportunities <span aria-hidden="true">→</span></a>
+  </div>
+
+</main>
+
+<footer class="site-footer container">
+  <p class="footer-name">Yash Kimtani · Product Manager</p>
+  <div class="footer-links">
+    <a href="mailto:yashkimtani77@gmail.com">Email</a>
+    <a href="https://linkedin.com/in/yashkimtani" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+</footer>
+
+</body>
+</html>
