@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Helping Sales Teams Prioritize the Right Account for Co-sell Opportunities — Yash Kimtani</title>
+<title>Helping Sales Teams Prioritize the Right Accounts for Co-sell — Yash Kimtani</title>
 <meta name="description" content="Case study: how I led Propensity to Buy and configurable ICP scoring at Labra to help sales teams prioritize the right co-sell accounts.">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="stylesheet" href="styles.css">
@@ -24,7 +24,7 @@
 
   <section class="case-hero container">
     <span class="case-kicker">Case Study 02</span>
-    <h1 class="case-title">Helping Sales Teams Prioritize the Right Account for Co-sell Opportunities</h1>
+    <h1 class="case-title">Helping Sales Teams Prioritize the Right Accounts for Co-sell</h1>
 
     <div class="case-meta">
       <div class="case-meta-item">
@@ -41,10 +41,12 @@
       <span class="case-meta-label">Partnered with</span>
       <div class="pill-row">
         <span class="pill">Engineering</span>
-        <span class="pill">Data Science</span>
-        <span class="pill">Customer Success</span>
         <span class="pill">Sales</span>
+        <span class="pill">Customer Success</span>
+        <span class="pill">RevOps</span>
+        <span class="pill">QA</span>
         <span class="pill">GTM</span>
+        <span class="pill">Design</span>
       </div>
     </div>
   </section>
@@ -55,75 +57,104 @@
       <div class="case-section">
         <p class="case-section-number">01</p>
         <h2 class="case-section-title">The Challenge</h2>
-        <p class="case-section-text">One question came up repeatedly from customers: <em>"We have hundreds of opportunities. Which ones should we actually share with AWS or Microsoft?"</em></p>
-        <p class="case-section-text">Submitting every opportunity to a hyperscaler wasn't practical. It created unnecessary work for partner teams and often resulted in low-quality referrals that had little chance of success.</p>
-        <p class="case-section-text">Customers needed a way to identify which accounts were the strongest candidates for co-selling before investing time in the process.</p>
-        <p class="case-section-text">The challenge was that this decision depended on many factors — not just company size or industry, but cloud adoption, firmographic data, technographic signals, engagement patterns, and how closely an account matched the customer's ideal customer profile (ICP).</p>
+        <p class="case-section-text">One question came up repeatedly from customers:</p>
+        <p class="case-section-text"><em>“We have hundreds of accounts and opportunities. Which ones should we actually take to AWS or Microsoft?”</em></p>
+        <p class="case-section-text">Submitting everything wasn’t practical. Partner teams had limited capacity, and sharing low-fit opportunities created additional work without necessarily improving co-sell outcomes.</p>
+        <p class="case-section-text">Customers already had plenty of data — firmographics, technology usage, cloud signals, engagement history, and CRM information.</p>
+        <p class="case-section-text">The real problem was turning those fragmented signals into a decision.</p>
+        <p class="case-section-text">The product question became: <em>how could we help Sales and Partner teams identify which accounts deserved their attention — and give them enough confidence to act on the recommendation?</em></p>
       </div>
 
       <div class="case-section">
         <p class="case-section-number">02</p>
-        <h2 class="case-section-title">My Role</h2>
-        <p class="case-section-text">I led the product strategy and execution for Propensity to Buy (PTB), a product designed to help customers prioritize the right accounts for co-selling. My responsibilities included:</p>
+        <h2 class="case-section-title">What We Learned</h2>
+        <p class="case-section-text">Discovery showed us that a “good account” wasn’t universal.</p>
+        <p class="case-section-text">Each customer had a different product, market, GTM motion, and definition of their ideal buyer. And an account that strongly matched a customer’s ICP wasn’t necessarily a strong candidate for a marketplace or co-sell motion.</p>
+        <p class="case-section-text">Our initial approach combined multiple signals into an overall propensity score. As we tested and iterated with customers, we learned that a single score could create false precision.</p>
+        <p class="case-section-text">Users needed to understand two things separately:</p>
         <ul class="case-list">
-          <li>Leading customer discovery to understand how sales teams prioritized accounts</li>
-          <li>Defining the scoring methodology and product requirements</li>
-          <li>Designing the account scoring algorithm with Engineering</li>
-          <li>Evaluating third-party data sources to improve prediction quality</li>
-          <li>Defining the Ideal Customer Profile (ICP) framework</li>
-          <li>Driving implementation, testing, rollout, and iterative improvements based on customer feedback</li>
+          <li>Is this account a strong fit for my business?</li>
+          <li>Are there signals that make it promising for a marketplace or co-sell motion?</li>
         </ul>
-        <p class="case-section-text">Rather than relying on a single signal, I worked on creating a scoring framework that combined multiple data sources into one actionable recommendation.</p>
+        <p class="case-section-text">That distinction became central to how the product evolved.</p>
       </div>
 
       <div class="case-section">
         <p class="case-section-number">03</p>
-        <h2 class="case-section-title">Key Product Decision #1 — Make the scoring explainable, not just predictive</h2>
-        <p class="case-section-text">Customers didn't just want a score — they wanted to understand why an account was flagged as high priority. We made the model explainable by showing the key factors behind each recommendation, such as firmographic fit, technographic signals, engagement history, and other contributing signals.</p>
-        <p class="case-section-text">That transparency mattered because it helped customers trust the output instead of treating it as a black box. When they could see why the system was recommending an account, they were far more likely to use it in real sales decisions.</p>
-        <p class="case-section-text"><strong>The goal wasn't to replace sales judgment — it was to build trust in the prioritization process and make it easier for teams to act on it.</strong></p>
+        <h2 class="case-section-title">My Role</h2>
+        <p class="case-section-text">I led product strategy and execution for Propensity to Buy (PTB), from customer discovery and problem definition through requirements, rollout, and iteration.</p>
+        <p class="case-section-text">I worked closely with Engineering to translate customer prioritization needs into a multi-signal scoring framework — defining which signals should contribute to account prioritization, how they should be interpreted, and how the resulting recommendations should be presented to customers.</p>
+        <p class="case-section-text">I also owned the ICP framework, evaluated internal and third-party data sources, and drove improvements to the scoring approach based on customer feedback and data quality.</p>
       </div>
 
       <div class="case-section">
         <p class="case-section-number">04</p>
-        <h2 class="case-section-title">Key Product Decision #2 — Make account prioritization configurable through ICPs</h2>
-        <p class="case-section-text">Every company defines its ideal customer differently. Instead of shipping one universal definition, we built a configurable Ideal Customer Profile (ICP) framework.</p>
-        <p class="case-section-text">Customers could define the characteristics of their target accounts, allowing the platform to evaluate how closely every account matched their business. This meant two companies using the same platform could receive completely different recommendations based on their own go-to-market strategy.</p>
-        <p class="case-section-text">The combination of PTB and configurable ICPs helped customers prioritize both:</p>
-        <ul class="case-list">
-          <li>Which accounts fit their business</li>
-          <li>Which accounts were most likely to succeed in a co-sell motion</li>
-        </ul>
+        <h2 class="case-section-title">Key Product Decisions</h2>
+
+        <div class="case-decision">
+          <h3 class="case-decision-title">Separate account fit from marketplace propensity</h3>
+          <p class="case-section-text">Rather than relying solely on one overall score, we evolved the product around two clearer dimensions:</p>
+          <ul class="case-list">
+            <li><strong>ICP Fit</strong> — how closely does this account match the customer’s ideal buyer?</li>
+            <li><strong>Marketplace Propensity</strong> — what signals suggest this account could be a strong candidate for a cloud marketplace or co-sell motion?</li>
+          </ul>
+          <p class="case-section-text">Separating the two gave users more context behind a recommendation instead of hiding different signals inside a single score.</p>
+        </div>
+
+        <div class="case-decision">
+          <h3 class="case-decision-title">Make prioritization customer-specific</h3>
+          <p class="case-section-text">Every customer defined an ideal account differently, so a universal ICP would have produced generic recommendations.</p>
+          <p class="case-section-text">We built a configurable ICP framework that allowed customers to define the firmographic, technographic, and other characteristics that mattered to their GTM strategy.</p>
+          <p class="case-section-text">The question shifted from <em>“Which companies are good?”</em> to <em>“Which companies are good for your business?”</em></p>
+        </div>
+
+        <div class="case-decision">
+          <h3 class="case-decision-title">Prioritize trust over a black-box score</h3>
+          <p class="case-section-text">As the product evolved, we learned that generating a recommendation wasn’t enough. Customers needed to understand why an account was prioritized and how much confidence they should place in the underlying signals.</p>
+          <p class="case-section-text">We made recommendations more explainable by exposing contributing factors and addressed an important data-quality problem: <em>missing data doesn’t necessarily mean low propensity.</em></p>
+          <p class="case-section-text">Instead of treating missing signals as negative signals, we began distinguishing between low fit and insufficient evidence, while evaluating additional data sources to improve coverage.</p>
+          <p class="case-section-text"><strong>This made explainability and data quality part of the product experience rather than simply implementation concerns.</strong></p>
+        </div>
       </div>
 
       <div class="case-section">
         <p class="case-section-number">05</p>
         <h2 class="case-section-title">What We Shipped</h2>
         <ul class="case-list">
-          <li>Propensity to Buy scoring for every account</li>
-          <li>Configurable Ideal Customer Profile framework</li>
-          <li>Multi-factor account evaluation using internal and third-party data</li>
-          <li>Prioritized account recommendations</li>
-          <li>Explainable scoring that helped sales teams understand recommendations</li>
-          <li>Continuous model improvements based on customer feedback and new data</li>
+          <li>Account-level Propensity to Buy recommendations</li>
+          <li>Configurable Ideal Customer Profile (ICP) framework</li>
+          <li>Separate views of account fit and marketplace propensity</li>
+          <li>Multi-signal evaluation using firmographic, technographic, engagement, and ecosystem signals</li>
+          <li>Explainable recommendations showing contributing factors</li>
+          <li>Handling for insufficient data and continuous improvements to scoring and data coverage</li>
         </ul>
       </div>
 
       <div class="case-outcome">
         <h3 class="case-outcome-title">Outcome</h3>
-        <p class="case-section-text">Although the product was still evolving, we saw meaningful early impact with the first set of customers. In the first few months, customers using the product were able to prioritize higher-quality co-sell opportunities more effectively, leading to roughly a 40% increase in qualified pipeline opportunities.</p>
-        <p class="case-section-text">The product helped customers:</p>
-        <ul class="case-list">
-          <li>Prioritize higher-quality co-sell opportunities</li>
-          <li>Increase qualified pipeline opportunities by roughly 40% in the early rollout phase</li>
-          <li>Improve account qualification by focusing on opportunities with stronger fit and better conversion potential</li>
-          <li>Make co-sell decisions using data rather than intuition</li>
-        </ul>
+        <div class="case-stats">
+          <div>
+            <p class="case-stat-value">~40%</p>
+            <p class="case-stat-label">increase in qualified opportunities for an early customer</p>
+          </div>
+        </div>
+        <p class="case-section-text">During early adoption, PTB and ICP-based prioritization helped customers focus their Sales and Partner teams on accounts with stronger fit and co-sell potential.</p>
+        <p class="case-section-text">Instead of treating every opportunity equally, teams could use multiple signals to prioritize higher-quality accounts, improve qualification, and make co-sell decisions with better evidence.</p>
+        <p class="case-section-text">The product shifted the conversation from <em>“Which opportunities do we have?”</em> to <em>“Which opportunities deserve our attention?”</em></p>
       </div>
 
       <div class="case-reflection">
-        <p class="case-reflection-label">Reflection</p>
-        <p class="case-reflection-text">Customers don't need more data — they need confidence in their decisions.</p>
+        <p class="case-reflection-label">What I Learned</p>
+        <p class="case-reflection-text">Customers don’t need more data — they need confidence in their decisions.</p>
+        <p class="case-section-text">My biggest learning from PTB was that building an intelligent product isn’t about creating the most sophisticated-looking score.</p>
+        <p class="case-section-text">Users consistently came back to three questions:</p>
+        <ul class="case-list">
+          <li>Why is this account recommended?</li>
+          <li>Can I trust the underlying data?</li>
+          <li>What should I do with this recommendation?</li>
+        </ul>
+        <p class="case-section-text">That changed how I approached the product. Explainability, data quality, and communicating uncertainty became just as important as the scoring methodology itself.</p>
+        <p class="case-section-text">The goal wasn’t to replace sales judgment — it was to give teams better evidence to make that judgment.</p>
       </div>
 
     </div>

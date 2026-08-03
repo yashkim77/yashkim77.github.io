@@ -45,7 +45,7 @@
         <span class="pill">Customer Success</span>
         <span class="pill">RevOps</span>
         <span class="pill">QA</span>
-        <span class="pill">Marketing</span>
+        <span class="pill">GTM</span>
         <span class="pill">Design</span>
       </div>
     </div>
@@ -57,37 +57,67 @@
       <div class="case-section">
         <p class="case-section-number">01</p>
         <h2 class="case-section-title">The Challenge</h2>
-        <p class="case-section-text">Enterprise companies running co-sell programs had to manage every opportunity across two separate systems — their CRM (Salesforce or HubSpot) and the cloud provider's partner portal, such as AWS Partner Central or Microsoft Partner Center (Azure).</p>
-        <p class="case-section-text">Whenever a deal was created or updated in one system, the same change had to be manually reflected in the other. In many organizations, Sales owned the CRM while Partner Operations managed the hyperscaler portal, creating duplicate work, inconsistent data, and delays throughout the sales cycle.</p>
-        <p class="case-section-text">As customers scaled, keeping these systems synchronized became increasingly difficult, slowing down co-sell execution and reducing trust in the data.</p>
+        <p class="case-section-text">Enterprise companies running co-sell programs managed the same opportunity across two systems — their CRM (Salesforce or HubSpot) and hyperscaler partner portals such as AWS Partner Central or Microsoft Partner Center.</p>
+        <p class="case-section-text">Sales teams primarily worked in the CRM, while Partner teams worked in hyperscaler portals. Every deal update often had to be manually reflected across both.</p>
+        <p class="case-section-text">As co-sell programs scaled, this created duplicate work, inconsistent data, and slower deal execution.</p>
+        <p class="case-section-text">The product question was: <em>how could we let teams run co-sell from the systems they already use while keeping CRM and hyperscaler workflows reliably synchronized?</em></p>
       </div>
 
       <div class="case-section">
         <p class="case-section-number">02</p>
-        <h2 class="case-section-title">My Role</h2>
-        <p class="case-section-text">I owned the product end-to-end, from customer discovery and roadmap definition to PRDs, execution, rollout, and post-launch improvements.</p>
-        <p class="case-section-text">Working closely with Engineering, Sales, Customer Success, and RevOps, I defined how deal synchronization should work across CRMs and hyperscaler partner portals. My engineering background also helped bridge technical implementation with product strategy, especially around the integration architecture.</p>
-        <p class="case-section-text">Beyond the core platform, I owned the customer-facing experiences through the Labra Salesforce App and Labra HubSpot App, delivering automation, notifications, workflow improvements, and ongoing enhancements based on customer feedback.</p>
+        <h2 class="case-section-title">What We Learned</h2>
+        <p class="case-section-text">Customer discovery showed us that this wasn’t simply a data-sync problem.</p>
+        <p class="case-section-text">Every customer had different CRM fields, workflows, validation rules, and ownership models. At the same time, each hyperscaler had its own APIs and opportunity lifecycle.</p>
+        <p class="case-section-text">We also learned an important lesson from our first Salesforce release.</p>
+        <p class="case-section-text">In V1, we leaned heavily into a native Salesforce experience because we wanted Sales teams to manage co-sell where they already worked. While this improved adoption, it introduced complexity as we scaled — particularly around package upgrades, customer-specific Salesforce environments, and our ability to evolve the product quickly.</p>
+        <p class="case-section-text">For V2, we moved toward a hybrid approach: keeping experiences native where they improved the user’s workflow, while moving capabilities that needed greater flexibility outside the constraints of the Salesforce package.</p>
+        <p class="case-section-text"><em>Be native where it creates user value; stay independent where it creates product leverage.</em></p>
+        <p class="case-section-text">That became an important principle as we evolved the platform.</p>
       </div>
 
       <div class="case-section">
         <p class="case-section-number">03</p>
-        <h2 class="case-section-title">Key Product Decision — Build a reusable synchronization platform, not a one-off integration</h2>
-        <p class="case-section-text">Instead of building separate solutions for each CRM and cloud provider, we designed Labra as an orchestration layer between them.</p>
-        <p class="case-section-text">Whenever an opportunity changed in Salesforce, HubSpot, AWS Partner Central, or Microsoft Partner Center, Labra detected the change, applied business rules, and synchronized the update across connected systems automatically.</p>
-        <p class="case-section-text">We first launched this platform for AWS customers. As demand for Microsoft Azure co-sell grew, we extended the same architecture to support Microsoft Partner Center, allowing us to expand into another hyperscaler without redesigning the product.</p>
-        <p class="case-section-text"><strong>Building the platform this way meant we weren't solving a single integration problem — we were creating a scalable foundation for multi-hyperscaler co-sell automation.</strong></p>
+        <h2 class="case-section-title">My Role</h2>
+        <p class="case-section-text">I owned the product end-to-end, from customer discovery and roadmap definition through requirements, delivery, rollout, and iteration.</p>
+        <p class="case-section-text">I worked closely with Engineering, Sales, Customer Success, RevOps, and Design to translate complex customer and hyperscaler workflows into a scalable product.</p>
+        <p class="case-section-text">My engineering background helped me work deeply with Engineering on API constraints, synchronization patterns, and architecture trade-offs, while my focus as PM remained on what problems we should solve, how the experience should work, and what would scale across customers and ecosystems.</p>
       </div>
 
       <div class="case-section">
         <p class="case-section-number">04</p>
+        <h2 class="case-section-title">Key Product Decisions</h2>
+
+        <div class="case-decision">
+          <h3 class="case-decision-title">Build a platform, not a collection of integrations</h3>
+          <p class="case-section-text">The quickest approach was to build separate point-to-point integrations for Salesforce ↔ AWS, HubSpot ↔ AWS, and eventually Microsoft.</p>
+          <p class="case-section-text">Instead, we designed Labra as an orchestration layer that could apply mappings and business rules while synchronizing opportunities across connected systems.</p>
+          <p class="case-section-text">This required more upfront investment but created a reusable foundation that later allowed us to expand from AWS to Microsoft Azure without rebuilding the product from scratch.</p>
+        </div>
+
+        <div class="case-decision">
+          <h3 class="case-decision-title">Make workflows configurable</h3>
+          <p class="case-section-text">Enterprise CRM implementations varied significantly across customers.</p>
+          <p class="case-section-text">Rather than hard-coding Labra around a standard CRM schema, we made mappings and workflow behavior configurable so customers could adapt Labra to their existing processes instead of changing their CRM to fit our product.</p>
+        </div>
+
+        <div class="case-decision">
+          <h3 class="case-decision-title">Balance native experience with scalability</h3>
+          <p class="case-section-text">V1 taught us that maximizing native functionality wasn’t necessarily the same as creating the best long-term product.</p>
+          <p class="case-section-text">For V2, we kept CRM-native experiences where they reduced context switching, while moving capabilities outside the native package when doing so improved upgradeability, maintainability, and iteration speed.</p>
+          <p class="case-section-text"><strong>The goal wasn’t to make everything native. It was to find the right boundary between user experience and product scalability.</strong></p>
+        </div>
+      </div>
+
+      <div class="case-section">
+        <p class="case-section-number">05</p>
         <h2 class="case-section-title">What We Shipped</h2>
         <ul class="case-list">
-          <li>A synchronization platform connecting Salesforce, HubSpot, and cloud hyperscaler partner portals</li>
-          <li>Native Salesforce and HubSpot applications for managing co-sell opportunities directly from the CRM</li>
-          <li>Automated deal creation, stage synchronization, notifications, validation, and error handling</li>
-          <li>Support for AWS Partner Central, later extended to Microsoft Partner Center (Azure) using the same platform architecture</li>
-          <li>Continuous enhancements driven by customer feedback and evolving hyperscaler APIs</li>
+          <li>Synchronization across Salesforce, HubSpot, AWS Partner Central, and Microsoft Partner Center</li>
+          <li>Salesforce and HubSpot experiences for managing co-sell workflows from the CRM</li>
+          <li>Automated opportunity creation, field and stage synchronization</li>
+          <li>Configurable field mappings and workflow rules</li>
+          <li>Notifications, validations, synchronization status, and error handling</li>
+          <li>A reusable platform foundation that expanded from AWS to Microsoft Azure</li>
         </ul>
       </div>
 
@@ -100,21 +130,21 @@
           </div>
           <div>
             <p class="case-stat-value">2</p>
-            <p class="case-stat-label">cloud hyperscalers supported through the same platform architecture</p>
+            <p class="case-stat-label">hyperscalers supported through the same platform foundation</p>
           </div>
         </div>
-        <ul class="case-list">
-          <li>Eliminated repetitive manual updates between CRM and hyperscaler portals</li>
-          <li>Improved collaboration between Sales and Partner Operations</li>
-          <li>Enabled customers to manage co-sell opportunities from within their CRM</li>
-          <li>The platform architecture scaled from AWS to Microsoft Azure without requiring a complete redesign</li>
-          <li>Some enterprise customers reported up to 80% reductions in manual operational effort</li>
-        </ul>
+        <p class="case-section-text">The platform reduced repetitive manual updates between CRM and hyperscaler portals and allowed Sales and Partner teams to operate with more consistent opportunity data.</p>
+        <p class="case-section-text">Customers could manage co-sell closer to their existing CRM workflows, while the underlying platform handled synchronization across systems.</p>
+        <p class="case-section-text">The architecture also scaled from AWS to Microsoft Azure without requiring a complete redesign, and some enterprise customers reported up to ~80% reduction in manual operational effort.</p>
       </div>
 
       <div class="case-reflection">
-        <p class="case-reflection-label">Reflection</p>
-        <p class="case-reflection-text">One thing I took away from this product is how important trust is when you’re automating a business-critical workflow. Once customers stop manually checking every update, they need to trust that the systems will stay in sync. That shaped a lot of our decisions as we scaled the product across AWS, Azure, Salesforce, and HubSpot.</p>
+        <p class="case-reflection-label">What I Learned</p>
+        <p class="case-reflection-text">Automation only works when users trust it.</p>
+        <p class="case-section-text">As customers stopped manually checking every update, we learned that synchronization itself wasn’t enough.</p>
+        <p class="case-section-text">Users needed confidence that opportunities had synced correctly — and clear visibility when they hadn’t.</p>
+        <p class="case-section-text">That made validation, error handling, reconciliation, and status visibility part of the product experience rather than purely technical concerns.</p>
+        <p class="case-section-text">The broader lesson for me was that building scalable integration products requires balancing three things: where users want to work, how reliably the system behaves, and how easily the product can evolve.</p>
       </div>
 
     </div>
@@ -123,7 +153,7 @@
   <div class="case-next container">
     <a href="index.html#work" class="case-back case-next-back">← Back to work</a>
     <p class="case-next-label">Next case study</p>
-    <a href="propensity-scoring.html" class="case-next-link">Helping Sales Teams Prioritize the Right Co-sell Opportunities <span aria-hidden="true">→</span></a>
+    <a href="propensity-scoring.html" class="case-next-link">Helping Sales Teams Prioritize the Right Accounts for Co-sell <span aria-hidden="true">→</span></a>
   </div>
 
 </main>
